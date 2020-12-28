@@ -25,8 +25,7 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new CleanWebpackPlugin(),
+    plugins: [  
         new CopyPlugin({
             patterns: [
                 { from: 'node_modules/@ionic/core/dist/ionic/svg', to: './svg' }]
