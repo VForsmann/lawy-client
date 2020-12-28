@@ -15,7 +15,7 @@ export default class BaseService {
         if(!instance) {
             instance = this;
         }
-        //@ts-ignore
+        
         const url = API_URL;
         this.socket = io(url, {
             transports: ['websocket'],

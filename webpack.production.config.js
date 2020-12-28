@@ -6,8 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const webpack = require("webpack");
 
-console.log(process.env.NODE_ENV)
 module.exports = {
+    mode: 'production',
     resolve: {
         extensions: [".ts", ".js", ".tsx"],
     },
@@ -29,7 +29,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'API_URL': JSON.stringify('http://localhost:80/')
+            'API_URL': JSON.stringify('http://54.160.68.171/')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
