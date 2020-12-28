@@ -1,5 +1,5 @@
 <script>
-    const path = window.location.pathname.slice(1);
+    const path = window.location.pathname.replace("/lawy-client/", "");
     localStorage.setItem('path', path);
     window.location.href='../lawy-client';
 </script>
