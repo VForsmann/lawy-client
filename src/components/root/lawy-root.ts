@@ -19,6 +19,16 @@ class LawyRoot extends PageMixin(LitElement) {
     @query("#profil")
     profilElement!: HTMLButtonElement;
 
+    constructor() {
+        super();
+        let path = localStorage.getItem('path');
+        if(path) {
+            console.log("404html redirects for spa!");
+            localStorage.removeItem('path');
+            router.navigate(path);
+          }
+    }
+
     stateChanged(state: State) {
         this.user = state.user;
         this.requestUpdate();

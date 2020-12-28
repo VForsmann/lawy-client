@@ -22,10 +22,11 @@ module.exports = {
                     { loader: 'css-loader', options: { sourceMap: true, esModule: false } },
                     { loader: 'sass-loader', options: { sourceMap: true } }
                 ]
-            },
+            }
         ],
     },
-    plugins: [  
+    plugins: [
+        new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns: [
                 { from: 'node_modules/@ionic/core/dist/ionic/svg', to: './svg' }]
@@ -34,6 +35,11 @@ module.exports = {
             template: "./src/index.html",
             filename: "./index.html",
             favicon: "./assets/favicon.ico"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./static/404.html",
+            filename: "./404.html",
+            inject: false
         }),
         new WebpackPwaManifest({
             name: 'Lawy',
