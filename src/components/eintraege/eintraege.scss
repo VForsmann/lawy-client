@@ -1,0 +1,20 @@
+lawy-eintraege {
+    width: 100%;
+    height: 100%;
+
+    .content {
+        width: 100%;
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .measurementButton {
+        width: 100%;
+        height: 50px;
+        margin: 0px;
+        position: sticky;
+        bottom: 0px;
+    }
+}

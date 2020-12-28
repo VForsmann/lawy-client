@@ -1,0 +1,14 @@
+lawy-neuer-eintrag {
+    width: 100%;
+
+    .modal {
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .measurementButton {
+        margin: 0px;
+    }
+}

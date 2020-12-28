@@ -1,0 +1,9 @@
+= lawy: Mitarbeiter-Koordination für den Handwerksbetrieb
+
+|===
+|Name | Matrikelnummer
+
+|Vitus Forsmann | 922815
+|Tizian Lengemann | 1142763
+|Marius Lange | 1141469
+|===

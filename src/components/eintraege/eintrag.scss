@@ -1,0 +1,26 @@
+lawy-eintrag {
+    width: 100%;
+
+    .oneline {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .part {
+        width: 33%;
+        text-align: center;
+    }
+
+    ion-icon[name="chevron-down-outline"] {
+        color: red;
+    }
+    ion-icon[name="chevron-up-outline"] {
+        color: green;
+    }
+}
