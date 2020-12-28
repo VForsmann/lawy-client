@@ -15,7 +15,7 @@ export default class BaseService {
         if(!instance) {
             instance = this;
         }
-        this.socket = io('http://localhost:8090', {
+        this.socket = io('http://54.160.68.171:80/', {
             transports: ['websocket'],
             forceNew: true
         });
