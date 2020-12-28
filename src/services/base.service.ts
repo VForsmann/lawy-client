@@ -16,7 +16,7 @@ export default class BaseService {
             instance = this;
         }
         //@ts-ignore
-        const url = webpackJsonp ? 'http://localhost:80/' : 'http://54.160.68.171/'
+        const url = API_URL;
         this.socket = io(url, {
             transports: ['websocket'],
             forceNew: true

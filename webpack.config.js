@@ -4,6 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const webpack = require("webpack");
+
+var API_URL = {
+    production: JSON.stringify('http://54.160.68.171/'),
+    development: JSON.stringify('http://localhost:80/')
+}
+var environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 module.exports = {
     resolve: {
@@ -26,6 +33,9 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'API_URL': API_URL[environment]
+        }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns: [
@@ -66,7 +76,7 @@ module.exports = {
                     src: path.resolve('./assets/android-chrome-144x144.png'),
                     sizes: [36, 48, 72, 96, 144, 192, 512],
                     destination: path.join('icons', 'android')
-                  }
+                }
             ],
             ios: {
                 // "apple-touch-icon": path.resolve('./assets/apple-touch-icon.png'),
