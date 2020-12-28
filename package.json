@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0",
-    "build": "webpack"
+    "build": "webpack --production"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.2",
