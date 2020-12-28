@@ -7,7 +7,7 @@ import { Measurement } from "../../interfaces/measurement.interface";
 import { State } from "../../interfaces/state.interface";
 import { addMeasurements } from "../../redux/actions/measurements.actions";
 import { store } from "../../redux/store";
-import measurementService from "../../services/measurement.service";
+import MeasurementService from "../../services/measurement.service";
 import './eintraege.scss';
 
 
@@ -67,7 +67,7 @@ class LawyEintraege extends PageMixin(LitElement) {
     }
 
     async firstUpdated() {
-        const measurements = (await measurementService.service.find({query: {
+        const measurements = (await MeasurementService.measurementService.find({query: {
             $limit: 1000000,
             user: store.getState().user?._id
         }})).data.map((measurement: Measurement) => {

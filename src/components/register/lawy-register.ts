@@ -60,14 +60,13 @@ class LawyRegister extends NoShadowMixin(LitElement) {
     }
 
     async register() {
-
         const passwordCheckInput = (await this.passwordCheck.getInputElement() as HTMLInputElement);
         if(this.password.value === this.passwordCheck.value) {
             passwordCheckInput.setCustomValidity("");
             const valid = this.form.reportValidity();
             if(valid) {
                 try {
-                    await UserService.service.create({email: this.email.value, password: this.password.value});
+                    const answer = await UserService.userService.create({email: this.email.value, password: this.password.value});
                     const userData = (await UserService.login({
                         email:this.email.value,
                         password: this.password.value

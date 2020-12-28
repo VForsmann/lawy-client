@@ -77,7 +77,8 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: {
-            index: "/",
+            index: "/lawy-client/",
         },
+        publicPath: '/lawy-client/'
     }
 };

@@ -2,13 +2,14 @@ import { LoginCredentials } from '../interfaces/user.interface';
 import BaseService from './base.service';
 
 
-class UserService extends BaseService {
+class UserService {
 
-    service: any;
+    userService: any;
+    client: any;
 
     constructor() {
-        super();
-        this.service = this.client.service("users");
+        this.client = new BaseService().client;
+        this.userService = this.client.service("users");
     }
 
     async login(credentials?: LoginCredentials) {

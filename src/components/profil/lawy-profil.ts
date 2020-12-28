@@ -84,7 +84,7 @@ class LawyProfil extends PageMixin(LitElement) {
             const valid = (document.querySelector("form") as HTMLFormElement).reportValidity();
             if (valid) {
                 try {
-                    userService.service.patch(this.user?._id, {
+                    userService.userService.patch(this.user?._id, {
                         password: passwordElement.value
                     });
                     const alert = await window.alertController.create({

@@ -49,7 +49,7 @@ class LawyNewEntry extends NoShadowMixin(LitElement) {
     async newMeasurement() {
         const input = this.querySelector('#numberInput') as HTMLInputElement;
         try {
-            const measurement = await measurementService.service.create({
+            const measurement = await measurementService.measurementService.create({
                 user: store.getState().user?._id,
                 date: new Date().getTime(),
                 weight: parseFloat(input.value)

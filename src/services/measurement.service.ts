@@ -1,12 +1,13 @@
 import BaseService from './base.service';
 
-class MeasurementService extends BaseService {
+class MeasurementService {
 
-    service: any = null;
+    client: any;
+    measurementService: any = null;
 
     constructor() {
-        super();
-        this.service = this.client.service("measurements");
+        this.client = new BaseService().client;
+        this.measurementService = this.client.service("measurements");
     }
 
 }
