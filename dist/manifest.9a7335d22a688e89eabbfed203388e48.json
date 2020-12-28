@@ -1,0 +1,108 @@
+{
+  "icons": [
+    {
+      "src": "icons/android/icon_512x512.001388f93109809896fe453e5e35a0d3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_192x192.1fba362a1f37ca46157c736e65bd73e2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_144x144.4ae9da3c31d49c947786c3caf63c0edd.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_96x96.7494c6128e0884bf7ee67e42e49b61fa.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_72x72.015ee8e9216cf5e1f0ae90d44f81bd0a.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_48x48.40e8bbd17c7bd67c51e912eb043fca43.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_36x36.2e6512e019ea141022d14f83033da427.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_512x512.d60147652723b6713682001f8a635917.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_384x384.20ba5a2816008ec32e313a880d1376bb.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_256x256.a6236c3000b1fbd4b2b9b0b16326e41d.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_192x192.45be3e7aa3a310b29ceef68ddc7701a8.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_128x128.ce94ad05e63cb070c0a03a7b3d1dcb5a.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_96x96.78755abbbde54299ecb4f4562a29f873.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/ios/icon_1024x1024.573ff4d5f693aa43b77e0cf0d03893b7.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_180x180.a4e5254b37ea6948ee940262af04c610.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_167x167.3d01f63373beb26e58a402d1020cb55d.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_152x152.80a38774de817ddfcad9d87266055526.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_120x120.87e6a4f041141a9f8cffbaef277de572.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ],
+  "name": "Lawy",
+  "short_name": "Lawy",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Lawy. App for Weight-Statistics.",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

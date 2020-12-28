@@ -1,9 +1,3 @@
-= lawy: Mitarbeiter-Koordination für den Handwerksbetrieb
+= lawy: Kleine App zum experimentieren mit einem EC2-Backend (siehe lawy-server).
 
-|===
-|Name | Matrikelnummer
 
-|Vitus Forsmann | 922815
-|Tizian Lengemann | 1142763
-|Marius Lange | 1141469
-|===

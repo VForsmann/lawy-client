@@ -41,22 +41,39 @@ module.exports = {
             short_name: 'Lawy',
             description: 'Lawy. App for Weight-Statistics.',
             background_color: '#ffffff',
+            inject: true,
+            ios: true,
             icons: [
-              {
-                src: path.resolve('./assets/android-chrome-144x144.png'),
-                sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
-                purpose: "any maskable"
-              },
+                {
+                    src: path.resolve('./assets/apple-touch-icon.png'),
+                    sizes: [120, 152, 167, 180, 1024],
+                    destination: path.join('icons', 'ios'),
+                    ios: true
+                },
+                {
+                    src: path.resolve('./assets/apple-touch-icon.png'),
+                    sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+                    purpose: "any maskable",
+                    destination: path.join('icons', 'ios'),
+                    ios: 'startup'
+                },
+                {
+                    src: path.resolve('./assets/android-chrome-144x144.png'),
+                    sizes: [36, 48, 72, 96, 144, 192, 512],
+                    destination: path.join('icons', 'android')
+                  }
             ],
             ios: {
-                "apple-touch-icon": path.resolve('./assets/apple-touch-icon.png'),
+                // "apple-touch-icon": path.resolve('./assets/apple-touch-icon.png'),
+                'apple-mobile-web-app-title': 'AppTitle',
+                'apple-mobile-web-app-status-bar-style': 'black'
             },
             theme_color: '#ffffff'
-          }),
+        }),
     ],
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "../lawy-server/public"),
+        path: path.resolve(__dirname, "./dist"),
     },
     devServer: {
         historyApiFallback: {
