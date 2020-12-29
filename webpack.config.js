@@ -29,7 +29,8 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'API_URL': JSON.stringify('http://localhost:80/')
+            'API_URL': JSON.stringify('http://localhost:80/'),
+            'API_PATH': JSON.stringify('/')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({

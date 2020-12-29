@@ -17,7 +17,10 @@ export default class BaseService {
         }
         //@ts-ignore
         const url = API_URL;
+        //@ts-ignore
+        const path = API_PATH;
         this.socket = io(url, {
+            path: path,
             transports: ['websocket'],
             forceNew: true
         });
