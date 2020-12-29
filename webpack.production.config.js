@@ -41,11 +41,6 @@ module.exports = {
             filename: "./index.html",
             favicon: "./assets/favicon.ico"
         }),
-        new HtmlWebpackPlugin({
-            template: "./static/404.html",
-            filename: "./404.html",
-            inject: false
-        }),
         new WebpackPwaManifest({
             name: 'Lawy',
             short_name: 'Lawy',
