@@ -29,8 +29,9 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'API_URL': JSON.stringify('http://lawy.ml/'),
-            'API_PATH': JSON.stringify('/api/socket.io')
+            'API_URL': JSON.stringify('https://lawy.ml/'),
+            'API_PATH': JSON.stringify('/api/socket.io'),
+            'API_SECURE': JSON.stringify('secure')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({

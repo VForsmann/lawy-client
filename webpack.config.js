@@ -30,7 +30,8 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'API_URL': JSON.stringify('http://localhost:80/'),
-            'API_PATH': JSON.stringify('/api/socket.io')
+            'API_PATH': JSON.stringify('/api/socket.io'),
+            'API_SECURE': JSON.stringify('')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({

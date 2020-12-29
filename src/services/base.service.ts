@@ -22,7 +22,9 @@ export default class BaseService {
         this.socket = io(url, {
             path: path,
             transports: ['websocket'],
-            forceNew: true
+            forceNew: true,
+            //@ts-ignore
+            secure: API_SECURE === "secure" ? true : false
         });
         this.client = feathers();
         this.client
