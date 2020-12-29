@@ -29,7 +29,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'API_URL': JSON.stringify('http://54.160.68.171/')
+            'API_URL': JSON.stringify('https://lawy.tk/api/')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
@@ -83,7 +83,7 @@ module.exports = {
     ],
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "./docs"),
+        path: path.resolve(__dirname, "../lawy-server/webapp"),
     },
     devServer: {
         historyApiFallback: {
