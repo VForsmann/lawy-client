@@ -30,7 +30,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'API_URL': JSON.stringify('http://localhost:80/'),
-            'API_PATH': JSON.stringify('/')
+            'API_PATH': JSON.stringify('/api/socket.io')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
@@ -83,8 +83,10 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: {
-            index: "/lawy-client/",
+            index: "/",
         },
-        publicPath: '/lawy-client/'
+        publicPath: '/',
+        host: '0.0.0.0',
+        
     }
 };

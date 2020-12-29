@@ -19,9 +19,13 @@ class LawyEintraege extends PageMixin(LitElement) {
     stateChanged(state: State) {
         this.measurements = state.measurements;
         this.requestUpdate();
+        if(state.user) {
+            
+        }
     }
 
     render() {
+        console.log("before", this.measurements);
         this.measurements = this.measurements.map((measurement: Measurement, index: number) => {
             const before = this.measurements[index-1];
             let symbol = "neutral";
@@ -38,6 +42,7 @@ class LawyEintraege extends PageMixin(LitElement) {
             };
             return {...measurement, symbol: symbol};
         }).reverse();
+        console.log("after", this.measurements);
         return html`
         <ion-content class="content">
             ${this.measurements.length > 0 ? this.renderMeasurements() : 
@@ -67,15 +72,21 @@ class LawyEintraege extends PageMixin(LitElement) {
     }
 
     async firstUpdated() {
-        const measurements = (await MeasurementService.measurementService.find({query: {
-            $limit: 1000000,
-            user: store.getState().user?._id
-        }})).data.map((measurement: Measurement) => {
-            return {_id: measurement._id, date: measurement.date, weight: measurement.weight};
-        });
-        if(measurements) {
-            store.dispatch(addMeasurements(measurements));
-        }
+        const unsubscribe = store.subscribe(async () => {
+            const state = store.getState();
+            if(state.user) {
+                const measurements = (await MeasurementService.measurementService.find({query: {
+                    $limit: 1000000,
+                    user: state.user?._id
+                }})).data.map((measurement: Measurement) => {
+                    return {_id: measurement._id, date: measurement.date, weight: measurement.weight};
+                });
+                if(measurements) {
+                    store.dispatch(addMeasurements(measurements));
+                    unsubscribe();
+                }
+            }
+        })
     }
 
     newMeasurement() {

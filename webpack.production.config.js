@@ -30,7 +30,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'API_URL': JSON.stringify('http://lawy.ml/'),
-            'API_PATH': JSON.stringify('/api/')
+            'API_PATH': JSON.stringify('/api/socket.io')
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({

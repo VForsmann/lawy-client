@@ -38,12 +38,14 @@ class LawyRoot extends PageMixin(LitElement) {
         return html`
         
             <ion-app>
-                <ion-header translucent>
+                <ion-header>
                     <ion-toolbar>
                         <ion-title>${router.getPath().toLocaleUpperCase()}</ion-title>
                     </ion-toolbar>
                 </ion-header>
-                ${this.renderOutlet()}
+                <ion-content>
+                    ${this.renderOutlet()}
+                </ion-content>
                 ${this.user ? this.loggedInContent() : ''}
             </ion-app>
         `
