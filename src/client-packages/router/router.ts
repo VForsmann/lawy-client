@@ -2,7 +2,7 @@ export type RouteListener = (relUrl: string) => void;
 export type Unsubscribe = () => void;
 export class Router {
   private listeners: RouteListener[] = [];
-  private rootPath = '/lawy-client/';
+  private rootPath = '/';
 
   constructor() {
     window.onpopstate = () => this.notifyListeners();
